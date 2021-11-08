@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require('cors')());
 app.use(require('helmet')());
-app.use('/api/students', require('./routes/students'));
+app.use('/api/Students', require('./routes/students'));
 
 
 //production

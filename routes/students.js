@@ -7,10 +7,12 @@ const Students = require('../models/students');
 //@route GET api/students
 //@desc Get all students
 //@access Public
-router.get('/', async (req, res) =>{
+router.get('/', (req, res) =>{
+    // res.send("yasyayayya");
     try{
-        const students = await Students.find({});
-        // res.send('Yash Lalpotu')
+        const students = Students.find({});
+        console.log(students + "students");
+        res.send('Yash Lalpotu')
         res.send({students});
     }
     catch(err){
