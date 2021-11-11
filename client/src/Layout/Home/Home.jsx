@@ -28,17 +28,17 @@ class Home extends Component {
     if (this.state.data)
       students =
         this.state.data.students &&
-        this.state.data.students.map(student => (
-          <Student key={student._id} {...student} removeStudent={this.removeStudent} />
-        ));
-    else return <div className="Spinner-Wrapper"> <PropagateLoader color={'#333'} /> </div>;
+    //     this.state.data.students.map(student => (
+    //       <Student key={student._id} {...student} removeStudent={this.removeStudent} />
+    //     ));
+    // else return <div className="Spinner-Wrapper"> <PropagateLoader color={'#333'} /> </div>;
 
-    if (this.state.error) return <h1>{this.state.error}</h1>;
-    if (this.state.data !== null)
-      if (!this.state.data.students.length)
-        return <h1 className="No-Students">No students!</h1>;
+    // if (this.state.error) return <h1>{this.state.error}</h1>;
+    // if (this.state.data !== null)
+    //   if (!this.state.data.students.length)
+    //     return <h1 className="No-Students">No students!</h1>;
 
-        console.log(students);
+    //     console.log(students);
 
     return (
       <div className="Table-Wrapper">
